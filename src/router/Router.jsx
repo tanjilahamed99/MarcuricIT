@@ -23,7 +23,7 @@ const Router = createBrowserRouter([
             element: <CreateItems />,
           },
           {
-            path: "/dashboard/updateItem",
+            path: "/dashboard/updateItem/:id",
             element: <UpdateItem />,
           },
         ],

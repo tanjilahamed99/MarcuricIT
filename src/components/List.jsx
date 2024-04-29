@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import dummyData from "./../../public/dummyData.json";
 
 const List = () => {
@@ -23,7 +24,9 @@ const List = () => {
               <td>{i.age}</td>
               <td>{i.company}</td>
               <th>
-                <button className="btn btn-outline">UPdate</button>
+                <Link to={`/dashboard/updateItem/${i.id}`}>
+                  <button className="btn btn-outline">UPdate</button>
+                </Link>
               </th>
             </tr>
           ))}
