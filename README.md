@@ -4,7 +4,6 @@
 ### Features 
 - user create new member info
 - user update member info
-- user delete member info
 
 
 
