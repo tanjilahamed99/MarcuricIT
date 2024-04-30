@@ -2,10 +2,14 @@ import { FaPlus } from "react-icons/fa";
 import Navbar from "../shared/Navbar";
 import Footer from "./Footer";
 import dummyData from "../../public/dummyData.json";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const Test = () => {
   const [size, setSize] = useState(5);
+  const [page, setPage] = useState(0);
+  const [pageNumber, setPageNumber] = useState(0);
+  const [mainData, setMainData] = useState([]);
+  const [paginationData, setPaginationData] = useState([]);
 
   const handleShowData = (e) => {
     const dataSize = e.target.value;
@@ -16,7 +20,39 @@ const Test = () => {
     }
   };
 
-  console.log(size);
+  useEffect(() => {
+    if (paginationData && paginationData.length > 0) {
+      setMainData([...paginationData]);
+    } else {
+      setMainData([...dummyData]);
+    }
+  }, [paginationData]);
+
+  useEffect(() => {
+    const pageSee = Math.ceil(dummyData.length / size);
+    setPage(pageSee);
+  }, [dummyData, size]);
+
+  let pageSee = [];
+
+  for (let index = 0; index < page; index++) {
+    pageSee.push(index);
+  }
+
+  const showData = (page) => {
+    setPageNumber(page);
+  };
+
+  const paginate = (pageNumber, pageSize) => {
+    const startIndex = (pageNumber - 1) * pageSize;
+    const endIndex = pageNumber * pageSize;
+    return dummyData.slice(startIndex, endIndex);
+  };
+
+  useEffect(() => {
+    const pagination = paginate(pageNumber, size);
+    setPaginationData([...pagination]);
+  }, [pageNumber, size]);
 
   return (
     <div className="">
@@ -55,7 +91,7 @@ const Test = () => {
                   </tr>
                 </thead>
                 <tbody>
-                  {dummyData.slice(0, size).map((i, idx) => (
+                  {mainData?.slice(0, size).map((i, idx) => (
                     <tr key={idx}>
                       <th>{i.id}</th>
                       <td>{i.name}</td>
@@ -74,7 +110,7 @@ const Test = () => {
             </div>
 
             {/* filter */}
-            <div className="mt-10">
+            <div className="mt-10 flex items-center justify-between">
               <select
                 name="size"
                 onChange={handleShowData}
@@ -85,6 +121,19 @@ const Test = () => {
                 <option>20</option>
                 <option>All</option>
               </select>
+
+              {/* pagination */}
+              <div className="join flex justify-center mb-5 gap-5">
+                {pageSee?.map((item) => (
+                  <button
+                    onClick={() => showData(item + 1)}
+                    className="btn btn-active hover:btn btn-outline"
+                    key={item}
+                  >
+                    {item + 1}
+                  </button>
+                ))}
+              </div>
             </div>
           </div>
         </div>
