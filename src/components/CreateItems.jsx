@@ -1,3 +1,4 @@
+import Swal from "sweetalert2";
 import dummyData from "../../public/dummyData.json";
 import { useNavigate } from "react-router-dom";
 
@@ -21,6 +22,12 @@ const CreateItems = () => {
     };
 
     dummyData.push(newData);
+
+    Swal.fire({
+      title: "successful Created",
+      text: "successful Created new Member",
+      icon: "success",
+    });
 
     navigate("/list");
   };

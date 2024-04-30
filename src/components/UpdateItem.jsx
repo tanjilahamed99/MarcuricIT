@@ -1,5 +1,6 @@
 import { useNavigate, useParams } from "react-router-dom";
 import dummyData from "../../public/dummyData.json";
+import Swal from "sweetalert2";
 
 const UpdateItem = () => {
   const navigate = useNavigate();
@@ -27,6 +28,12 @@ const UpdateItem = () => {
 
     const exist = dummyData.findIndex((item) => item.id === data.id);
     dummyData[exist] = UpdateData;
+
+    Swal.fire({
+      title: "successful",
+      text: "successful updated",
+      icon: "success",
+    });
 
     navigate("/list");
   };
