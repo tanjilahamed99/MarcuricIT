@@ -3,6 +3,7 @@ import Navbar from "../shared/Navbar";
 import Footer from "./Footer";
 import dummyData from "../../public/dummyData.json";
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 const Test = () => {
   const [size, setSize] = useState(5);
@@ -58,15 +59,18 @@ const Test = () => {
     <div className="">
       <Navbar />
       <div className="bg-slate-200 p-5">
-        <h2 className="text-lg font-medium">lab test</h2>
+        <h2 className="text-lg font-medium mb-5">lab test</h2>
 
         <div className="p-5 bg-white">
           <div className="flex justify-between items-center">
             <h2 className="mb-3 text-lg font-bold">Lav Tests</h2>
-            <button className="btn btn-primary rounded-none btn-sm">
-              <FaPlus />
-              Create Test
-            </button>
+            <Link to={"/createTest"}>
+              {" "}
+              <button className="btn btn-primary rounded-none btn-sm">
+                <FaPlus />
+                Create Test
+              </button>
+            </Link>
           </div>
 
           <div>
