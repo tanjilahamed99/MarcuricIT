@@ -29,12 +29,16 @@ const Dashboard = () => {
 
   return (
     <div>
-      <div className="flex gap-10">
-        <div className="bg-slate-100 p-5 w-[20%] h-[100vh]">
-          <h2 className="text-2xl font-bold my-5">Dashboard</h2>
-          <ul className="space-y-2">{ulLInks}</ul>
+      <div className="flex flex-col md:flex-row md:gap-10">
+        <div className="bg-slate-100 p-5 md:w-[20%] md:h-[100vh]">
+          <h2 className="text-2xl font-bold my-5 text-center md:text-start">
+            Dashboard
+          </h2>
+          <ul className="md:space-y-2 flex flex-row md:flex-col items-center md:items-start gap-5 md:gap-0  justify-center md:justify-start">
+            {ulLInks}
+          </ul>
         </div>
-        <div className="w-[80%]">
+        <div className="md:w-[80%]">
           <Outlet />
         </div>
       </div>

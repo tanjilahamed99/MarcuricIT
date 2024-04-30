@@ -19,19 +19,5 @@
     "phoneNumber": "+019748626586957",
     "age": 25,
     "company": "vivo"
-  },
-  {
-    "id": 4,
-    "name": "Rimon",
-    "phoneNumber": "+01974826586957",
-    "age": 20,
-    "company": "samsung"
-  },
-  {
-    "id": 5,
-    "name": "sujan",
-    "phoneNumber": "+019794826586957",
-    "age": 40,
-    "company": "microsoft"
   }
 ]
