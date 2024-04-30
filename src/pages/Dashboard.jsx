@@ -6,7 +6,7 @@ const Dashboard = () => {
     <>
       <li>
         <NavLink
-          to="/dashboard/list"
+          to="/list"
           className={({ isActive, isPending }) =>
             isPending ? "pending" : isActive ? "active font-bold" : ""
           }
@@ -16,7 +16,7 @@ const Dashboard = () => {
       </li>
       <li>
         <NavLink
-          to="/dashboard/createItem"
+          to="/createItem"
           className={({ isActive, isPending }) =>
             isPending ? "pending" : isActive ? "active font-bold" : ""
           }
@@ -30,7 +30,7 @@ const Dashboard = () => {
   return (
     <div>
       <div className="flex gap-10">
-        <div className="bg-slate-100 p-5 w-[20%]">
+        <div className="bg-slate-100 p-5 w-[20%] h-[100vh]">
           <h2 className="text-2xl font-bold my-5">Dashboard</h2>
           <ul className="space-y-2">{ulLInks}</ul>
         </div>

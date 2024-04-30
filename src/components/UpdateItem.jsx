@@ -1,14 +1,45 @@
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import dummyData from "../../public/dummyData.json";
 
 const UpdateItem = () => {
+  const navigate = useNavigate();
+  // its comes from params
   const { id } = useParams();
 
   const data = dummyData.find((i) => i.id == id);
 
+  // update function
+  const handleUpdateInfo = (e) => {
+    e.preventDefault();
+    const form = e.target;
+    const name = form.name.value;
+    const age = form.age.value;
+    const phoneNumber = form.mobileNumber.value;
+    const company = form.company.value;
+
+    const UpdateData = {
+      name,
+      age,
+      phoneNumber,
+      company,
+      id: parseInt(id),
+    };
+
+    const exist = dummyData.findIndex((item) => item.id === data.id);
+    dummyData[exist] = UpdateData;
+
+    navigate("/list");
+  };
+
   return (
     <div className="my-10">
-      <form className="grid grid-cols-2 items-center gap-5">
+      <h2 className="font-bold text-center text-3xl mb-5">
+        Update {data.name} info
+      </h2>
+      <form
+        onSubmit={handleUpdateInfo}
+        className="grid grid-cols-2 items-center gap-5"
+      >
         <div className="flex flex-col items-start  gap-2">
           <label className="text-lg font-semibold">Name</label>
           <input
@@ -55,7 +86,7 @@ const UpdateItem = () => {
         </div>
 
         <button type="submit" className="btn btn-outline col-span-2">
-          Create
+          Update
         </button>
       </form>
     </div>

@@ -1,5 +1,4 @@
 import { createBrowserRouter } from "react-router-dom";
-import Root from "../Root/Root";
 import Dashboard from "../pages/Dashboard";
 import List from "../components/List";
 import UpdateItem from "../components/UpdateItem";
@@ -8,25 +7,19 @@ import CreateItems from "../components/CreateItems";
 const Router = createBrowserRouter([
   {
     path: "/",
-    element: <Root />,
+    element: <Dashboard />,
     children: [
       {
-        path: "/dashboard",
-        element: <Dashboard />,
-        children: [
-          {
-            path: "/dashboard/list",
-            element: <List />,
-          },
-          {
-            path: "/dashboard/createItem",
-            element: <CreateItems />,
-          },
-          {
-            path: "/dashboard/updateItem/:id",
-            element: <UpdateItem />,
-          },
-        ],
+        path: "/list",
+        element: <List />,
+      },
+      {
+        path: "/createItem",
+        element: <CreateItems />,
+      },
+      {
+        path: "/updateItem/:id",
+        element: <UpdateItem />,
       },
     ],
   },
