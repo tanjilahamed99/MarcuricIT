@@ -1,45 +1,59 @@
-import { Outlet } from "react-router-dom";
-import { NavLink } from "react-router-dom";
+import { IoIosLogOut, IoMdArrowDropdown } from "react-icons/io";
+import { FaDownload } from "react-icons/fa";
+import { RiPrinterFill } from "react-icons/ri";
+import { MdOutlineEmail } from "react-icons/md";
+import Navbar from "../shared/Navbar";
+import DatePicker from "react-datepicker";
+import { useState } from "react";
 
 const Dashboard = () => {
-  const ulLInks = (
-    <>
-      <li>
-        <NavLink
-          to="/list"
-          className={({ isActive, isPending }) =>
-            isPending ? "pending" : isActive ? "active font-bold" : ""
-          }
-        >
-          List
-        </NavLink>
-      </li>
-      <li>
-        <NavLink
-          to="/createItem"
-          className={({ isActive, isPending }) =>
-            isPending ? "pending" : isActive ? "active font-bold" : ""
-          }
-        >
-          Create Item
-        </NavLink>
-      </li>
-    </>
-  );
+  const [startDate, setStartDate] = useState(new Date());
+
 
   return (
     <div>
-      <div className="flex flex-col md:flex-row md:gap-10">
-        <div className="bg-slate-100 p-5 md:w-[20%] md:h-[100vh]">
-          <h2 className="text-2xl font-bold my-5 text-center md:text-start">
-            Dashboard
-          </h2>
-          <ul className="md:space-y-2 flex flex-row md:flex-col items-center md:items-start gap-5 md:gap-0  justify-center md:justify-start">
-            {ulLInks}
-          </ul>
+      <Navbar />
+
+      <div className="bg-slate-200 p-5 text-[]">
+        <div className="flex justify-between items-center">
+          <h2 className="text-lg font-medium">Dashboard</h2>
+
+          <div className="flex items-center gap-3 border-2">
+            <DatePicker
+              className="h-12 pl-4"
+              selected={startDate}
+              onChange={(date) => setStartDate(date)}
+            />
+
+            <details className="dropdown">
+              <summary className="m-1 btn btn-primary rounded-none">
+                <FaDownload />
+                download
+                <IoMdArrowDropdown />
+              </summary>
+              <ul className="p-2 shadow menu dropdown-content z-[1] bg-base-100 rounded-box right-5 w-40">
+                <div className="space-y-3 py-5 pl-5">
+                  <div className="flex items-center gap-1 hover:bg-slate-50 cursor-pointer">
+                    <MdOutlineEmail className="text-xl" />
+                    <h3>Email</h3>
+                  </div>
+                  <div className="flex items-center gap-1 hover:bg-slate-50 cursor-pointer">
+                    <RiPrinterFill className="text-xl" />
+                    <h3>Print</h3>
+                  </div>
+                </div>
+                <hr />
+
+                <div className="flex items-center gap-1 hover:bg-slate-50 cursor-pointer pl-5">
+                  <IoIosLogOut className="text-xl" />
+                  <h3>Re_Generate</h3>
+                </div>
+              </ul>
+            </details>
+          </div>
         </div>
-        <div className="md:w-[80%]">
-          <Outlet />
+
+        <div>
         </div>
       </div>
     </div>

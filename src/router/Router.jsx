@@ -1,21 +1,27 @@
 import { createBrowserRouter } from "react-router-dom";
 import Dashboard from "../pages/Dashboard";
-import List from "../components/List";
 import UpdateItem from "../components/UpdateItem";
 import CreateItems from "../components/CreateItems";
+import Root from "../Root/Root";
+import Profile from "../components/Profile";
+import Test from "../components/Test";
 
 const Router = createBrowserRouter([
   {
     path: "/",
-    element: <Dashboard />,
+    element: <Root />,
     children: [
       {
-        path: "/list",
-        element: <List />,
+        path: "/",
+        element: <Dashboard />,
       },
       {
-        path: "/createItem",
-        element: <CreateItems />,
+        path: "/profile",
+        element: <Profile />,
+      },
+      {
+        path: "/test",
+        element: <Test />,
       },
       {
         path: "/updateItem/:id",
