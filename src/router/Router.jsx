@@ -4,6 +4,9 @@ import Root from "../Root/Root";
 import Profile from "../components/Profile";
 import Test from "../components/Test";
 import CreateTest from "../components/CreateTest";
+import Login from "../shared/Login";
+import SignUP from "../shared/SignUP";
+import Lock from "../shared/Lock";
 
 const Router = createBrowserRouter([
   {
@@ -27,6 +30,18 @@ const Router = createBrowserRouter([
         element: <CreateTest />,
       },
     ],
+  },
+  {
+    path: "/login",
+    element: <Login />,
+  },
+  {
+    path: "/signUP",
+    element: <SignUP />,
+  },
+  {
+    path: "/lock",
+    element: <Lock />,
   },
 ]);
 

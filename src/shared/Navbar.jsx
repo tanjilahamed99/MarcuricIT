@@ -7,6 +7,7 @@ import { CgProfile } from "react-icons/cg";
 import { CiLock } from "react-icons/ci";
 import { IoIosLogOut } from "react-icons/io";
 import Drawer from "./Drawer";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   return (
@@ -53,23 +54,28 @@ const Navbar = () => {
             <IoMdArrowDropdown />
           </summary>
           <ul className="p-2 shadow menu dropdown-content z-[1] bg-base-100 rounded-box right-5 w-40">
-            <div className="space-y-3 py-5">
+            <div className="space-y-5 py-5">
               <h2 className="text-xl font-semibold">welcome!</h2>
               <div className="flex items-center gap-1 hover:bg-slate-50 cursor-pointer">
                 <CgProfile className="text-xl" />
                 <h3>My Account</h3>
               </div>
-              <div className="flex items-center gap-1 hover:bg-slate-50 cursor-pointer">
-                <CiLock className="text-xl" />
-                <h3>Lack Screen</h3>
-              </div>
+              <Link className="" to={"/lock"}>
+                {" "}
+                <div className="flex items-center gap-1 mt-2 hover:bg-slate-50 cursor-pointer">
+                  <CiLock className="text-xl" />
+                  <h3>Lack Screen</h3>
+                </div>
+              </Link>
             </div>
             <hr />
 
-            <div className="flex items-center gap-1 hover:bg-slate-50 cursor-pointer">
-              <IoIosLogOut className="text-xl" />
-              <h3>Logout</h3>
-            </div>
+            <Link to={"/login"}>
+              <div className="flex items-center gap-1 hover:bg-slate-50 cursor-pointer">
+                <IoIosLogOut className="text-xl" />
+                <h3>Logout</h3>
+              </div>
+            </Link>
           </ul>
         </details>
       </div>
