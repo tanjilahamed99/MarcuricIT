@@ -1,11 +1,11 @@
 import { FaPlus } from "react-icons/fa";
 import Navbar from "../shared/Navbar";
 import Footer from "./Footer";
-import dummyData from "../../public/dummyData.json";
+import dummyData from "../../public/invoice.json";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
-const Test = () => {
+const Invoice = () => {
   const [size, setSize] = useState(5);
   const [page, setPage] = useState(0);
   const [pageNumber, setPageNumber] = useState(0);
@@ -59,16 +59,16 @@ const Test = () => {
     <div className="">
       <Navbar />
       <div className="bg-slate-200 p-5">
-        <h2 className="text-lg font-medium mb-5">lab test</h2>
+        <h2 className="text-lg font-medium mb-5">Invoice</h2>
 
         <div className="p-5 bg-white">
           <div className="flex justify-between items-center">
-            <h2 className="mb-3 text-lg font-bold">Lav Tests</h2>
+            <h2 className="mb-3 text-lg font-bold">Invoice</h2>
             <Link to={"/createTest"}>
               {" "}
               <button className="btn btn-primary rounded-none btn-sm">
                 <FaPlus />
-                Create Test
+                Create Invoice
               </button>
             </Link>
           </div>
@@ -88,23 +88,47 @@ const Test = () => {
               <table className="table">
                 {/* head */}
                 <thead>
-                  <tr>
+                  <tr className="space-x-10">
                     <th>#</th>
-                    <th>Name</th>
-                    <th>Shortcut</th>
-                    <th>Sample Type</th>
-                    <th>Price</th>
+                    <th>Barcode</th>
+                    <th>Client Code</th>
+                    <th>Client Name</th>
+                    <th>Doctor Name</th>
+                    <th>Subtotal</th>
+                    <th>Reference</th>
+                    <th>Discount</th>
+                    <th>Total</th>
+                    <th>Paid</th>
+                    <th>Due</th>
+                    <th>Status</th>
                     <th>Action</th>
                   </tr>
                 </thead>
                 <tbody>
                   {mainData?.slice(0, size).map((i, idx) => (
-                    <tr key={idx}>
-                      <th>{i.id}</th>
-                      <td>{i.name}</td>
-                      <td>{i.shortcut}</td>
-                      <td>{i.sampleType}</td>
-                      <td>{i.price}</td>
+                    <tr className="space-x-10" key={idx}>
+                      <th>{i.clientId}</th>
+                      <td>{i.Barcode}</td>
+                      <td>{i.clientCode}</td>
+                      <td>{i.clientName}</td>
+                      <td>{i.doctorName}</td>
+                      <td>{i.subtotal}</td>
+                      <td>{i.reference}</td>
+                      <td>{i.Discount}</td>
+                      <td>{i.Total}</td>
+                      <td>{i.Paid}</td>
+                      <td>{i.Due}</td>
+                      <td className="">
+                        <button
+                          className={`btn btn-ghost btn-xs ${
+                            i.status
+                              ? "bg-green-500 text-white"
+                              : "bg-red-500 text-white"
+                          }`}
+                        >
+                          {i.status ? "paid" : "pending"}
+                        </button>
+                      </td>
                       <th>
                         <button className="btn btn-ghost btn-xs border-red-300">
                           delete
@@ -159,4 +183,4 @@ const Test = () => {
   );
 };
 
-export default Test;
+export default Invoice;

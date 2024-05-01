@@ -7,6 +7,11 @@ import CreateTest from "../components/CreateTest";
 import Login from "../shared/Login";
 import SignUP from "../shared/SignUP";
 import Lock from "../shared/Lock";
+import Cultures from "../components/Cultures";
+import AddCultures from "../components/AddCultures";
+import CulturesOption from "../components/CulturesOption";
+import CreateCulturesOption from "../components/CreateCulturesOption";
+import Invoice from "../components/Invoice";
 
 const Router = createBrowserRouter([
   {
@@ -28,6 +33,26 @@ const Router = createBrowserRouter([
       {
         path: "/createTest",
         element: <CreateTest />,
+      },
+      {
+        path: "/cultures",
+        element: <Cultures />,
+      },
+      {
+        path: "/addCultures",
+        element: <AddCultures />,
+      },
+      {
+        path: "/culturesOption",
+        element: <CulturesOption />,
+      },
+      {
+        path: "/createCulturesOption",
+        element: <CreateCulturesOption />,
+      },
+      {
+        path: "/invoice",
+        element: <Invoice />,
       },
     ],
   },

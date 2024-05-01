@@ -1,0 +1,122 @@
+[
+  {
+    "id": 1,
+    "name": "Shakib",
+    "sampleType": "Blood",
+    "price": 2000
+  },
+  {
+    "id": 2,
+    "name": "John",
+    "sampleType": "Urine",
+    "price": 1500
+  },
+  {
+    "id": 3,
+    "name": "Alice",
+    "sampleType": "Saliva",
+    "price": 1800
+  },
+  {
+    "id": 4,
+    "name": "Bob",
+    "sampleType": "Hair",
+    "price": 2200
+  },
+  {
+    "id": 5,
+    "name": "Emily",
+    "sampleType": "Sweat",
+    "price": 1700
+  },
+  {
+    "id": 6,
+    "name": "Michael",
+    "sampleType": "Tissue",
+    "price": 2100
+  },
+  {
+    "id": 7,
+    "name": "Sophia",
+    "sampleType": "Saliva",
+    "price": 1900
+  },
+  {
+    "id": 8,
+    "name": "William",
+    "sampleType": "Blood",
+    "price": 2300
+  },
+  {
+    "id": 9,
+    "name": "Emma",
+    "sampleType": "Urine",
+    "price": 1600
+  },
+  {
+    "id": 10,
+    "name": "James",
+    "sampleType": "Hair",
+    "price": 2000
+  },
+  {
+    "id": 11,
+    "name": "Olivia",
+    "sampleType": "Sweat",
+    "price": 1800
+  },
+  {
+    "id": 12,
+    "name": "Alexander",
+    "sampleType": "Tissue",
+    "price": 2100
+  },
+  {
+    "id": 13,
+    "name": "Charlotte",
+    "sampleType": "Blood",
+    "price": 2200
+  },
+  {
+    "id": 14,
+    "name": "Daniel",
+    "sampleType": "Urine",
+    "price": 1700
+  },
+  {
+    "id": 15,
+    "name": "Mia",
+    "sampleType": "Saliva",
+    "price": 1900
+  },
+  {
+    "id": 16,
+    "name": "Liam",
+    "sampleType": "Hair",
+    "price": 2400
+  },
+  {
+    "id": 17,
+    "name": "Ava",
+    "sampleType": "Sweat",
+    "price": 1600
+  },
+  {
+    "id": 18,
+    "name": "Matthew",
+    "sampleType": "Tissue",
+    "price": 2000
+  },
+  {
+    "id": 19,
+    "name": "Amelia",
+    "sampleType": "Blood",
+    "price": 2200
+  },
+  {
+    "id": 20,
+    "name": "Ethan",
+    "sampleType": "Urine",
+    "price": 1800
+  }
+]

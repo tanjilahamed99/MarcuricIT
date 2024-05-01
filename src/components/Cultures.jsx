@@ -1,11 +1,11 @@
 import { FaPlus } from "react-icons/fa";
 import Navbar from "../shared/Navbar";
 import Footer from "./Footer";
-import dummyData from "../../public/dummyData.json";
+import dummyData from "../../public/cultures.json";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
-const Test = () => {
+const Cultures = () => {
   const [size, setSize] = useState(5);
   const [page, setPage] = useState(0);
   const [pageNumber, setPageNumber] = useState(0);
@@ -59,16 +59,15 @@ const Test = () => {
     <div className="">
       <Navbar />
       <div className="bg-slate-200 p-5">
-        <h2 className="text-lg font-medium mb-5">lab test</h2>
+        <h2 className="text-lg font-medium mb-5">lab Cultures</h2>
 
         <div className="p-5 bg-white">
           <div className="flex justify-between items-center">
-            <h2 className="mb-3 text-lg font-bold">Lav Tests</h2>
-            <Link to={"/createTest"}>
-              {" "}
+            <h2 className="mb-3 text-lg font-bold">Cultures</h2>
+            <Link to={"/addCultures"}>
               <button className="btn btn-primary rounded-none btn-sm">
                 <FaPlus />
-                Create Test
+                Create cultures
               </button>
             </Link>
           </div>
@@ -91,7 +90,6 @@ const Test = () => {
                   <tr>
                     <th>#</th>
                     <th>Name</th>
-                    <th>Shortcut</th>
                     <th>Sample Type</th>
                     <th>Price</th>
                     <th>Action</th>
@@ -102,7 +100,6 @@ const Test = () => {
                     <tr key={idx}>
                       <th>{i.id}</th>
                       <td>{i.name}</td>
-                      <td>{i.shortcut}</td>
                       <td>{i.sampleType}</td>
                       <td>{i.price}</td>
                       <th>
@@ -142,7 +139,7 @@ const Test = () => {
                 {pageSee?.map((item) => (
                   <button
                     onClick={() => showData(item + 1)}
-                    className="btn btn-active  btn-outline btn-sm"
+                    className="btn btn-active btn-outline btn-sm"
                     key={item}
                   >
                     {item + 1}
@@ -159,4 +156,4 @@ const Test = () => {
   );
 };
 
-export default Test;
+export default Cultures;

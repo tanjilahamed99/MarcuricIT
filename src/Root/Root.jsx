@@ -49,6 +49,71 @@ const Root = () => {
           </p>
         </NavLink>
       </li>
+      <li>
+        <NavLink
+          to="/cultures"
+          className={({ isActive, isPending }) =>
+            isPending ? "pending" : isActive ? "active font-bold" : ""
+          }
+        >
+          <p className="flex items-center text-lg gap-2">
+            <GoLink />
+            Cultures
+          </p>
+        </NavLink>
+      </li>
+      <li>
+        <NavLink
+          to="/culturesOption"
+          className={({ isActive, isPending }) =>
+            isPending ? "pending" : isActive ? "active font-bold" : ""
+          }
+        >
+          <p className="flex items-center text-lg gap-2">
+            <GoLink />
+            Cultures option
+          </p>
+        </NavLink>
+      </li>
+      <li>
+        <NavLink
+          to="/invoice"
+          className={({ isActive, isPending }) =>
+            isPending ? "pending" : isActive ? "active font-bold" : ""
+          }
+        >
+          <p className="flex items-center text-lg gap-2">
+            <TbFileInvoice />
+            Invoice
+          </p>
+        </NavLink>
+      </li>
+      <li>
+        <NavLink
+          to="/report"
+          className={({ isActive, isPending }) =>
+            isPending ? "pending" : isActive ? "active font-bold" : ""
+          }
+        >
+          <p className="flex items-center text-lg gap-2">
+            <TbMessageReport />
+            Report
+          </p>
+        </NavLink>
+      </li>
+      <li>
+        <NavLink
+          to="/branches"
+          className={({ isActive, isPending }) =>
+            isPending ? "pending" : isActive ? "active font-bold" : ""
+          }
+        >
+          <p className="flex items-center text-lg gap-2">
+            <TbMessageReport />
+            Branches
+          </p>
+        </NavLink>
+      </li>
     </>
   );
 
