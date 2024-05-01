@@ -11,7 +11,7 @@ const Drawer = () => {
     <>
       <li>
         <NavLink
-          to="/"
+          to="/dashboard"
           className={({ isActive, isPending }) =>
             isPending ? "pending" : isActive ? "active font-bold" : ""
           }
@@ -24,7 +24,7 @@ const Drawer = () => {
       </li>
       <li>
         <NavLink
-          to="/profile"
+          to="/dashboard/profile"
           className={({ isActive, isPending }) =>
             isPending ? "pending" : isActive ? "active font-bold" : ""
           }
@@ -37,7 +37,7 @@ const Drawer = () => {
       </li>
       <li>
         <NavLink
-          to="/test"
+          to="/dashboard/test"
           className={({ isActive, isPending }) =>
             isPending ? "pending" : isActive ? "active font-bold" : ""
           }
@@ -50,7 +50,7 @@ const Drawer = () => {
       </li>
       <li>
         <NavLink
-          to="/cultures"
+          to="/dashboard/cultures"
           className={({ isActive, isPending }) =>
             isPending ? "pending" : isActive ? "active font-bold" : ""
           }
@@ -63,7 +63,7 @@ const Drawer = () => {
       </li>
       <li>
         <NavLink
-          to="/culturesOption"
+          to="/dashboard/culturesOption"
           className={({ isActive, isPending }) =>
             isPending ? "pending" : isActive ? "active font-bold" : ""
           }
@@ -76,7 +76,7 @@ const Drawer = () => {
       </li>
       <li>
         <NavLink
-          to="/invoice"
+          to="/dashboard/invoice"
           className={({ isActive, isPending }) =>
             isPending ? "pending" : isActive ? "active font-bold" : ""
           }
@@ -89,7 +89,7 @@ const Drawer = () => {
       </li>
       <li>
         <NavLink
-          to="/report"
+          to="/dashboard/report"
           className={({ isActive, isPending }) =>
             isPending ? "pending" : isActive ? "active font-bold" : ""
           }
@@ -102,7 +102,7 @@ const Drawer = () => {
       </li>
       <li>
         <NavLink
-          to="/branches"
+          to="/dashboard/branches"
           className={({ isActive, isPending }) =>
             isPending ? "pending" : isActive ? "active font-bold" : ""
           }

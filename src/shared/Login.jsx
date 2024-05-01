@@ -83,7 +83,7 @@ const Login = () => {
                 <p className="font-semibold text-sm">Remember me</p>
               </div>
               <div className="form-control mt-6">
-                <Link className="w-full" to={"/"}>
+                <Link className="w-full" to={"/dashboard"}>
                   {" "}
                   <button className="btn w-full btn-primary">Login</button>
                 </Link>

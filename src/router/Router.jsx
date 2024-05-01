@@ -1,4 +1,4 @@
-import { createBrowserRouter } from "react-router-dom";
+import { Navigate, createBrowserRouter } from "react-router-dom";
 import Dashboard from "../pages/Dashboard";
 import Root from "../Root/Root";
 import Profile from "../components/Profile";
@@ -17,53 +17,7 @@ import Branches from "../components/Branches";
 const Router = createBrowserRouter([
   {
     path: "/",
-    element: <Root />,
-    children: [
-      {
-        path: "/",
-        element: <Dashboard />,
-      },
-      {
-        path: "/profile",
-        element: <Profile />,
-      },
-      {
-        path: "/test",
-        element: <Test />,
-      },
-      {
-        path: "/createTest",
-        element: <CreateTest />,
-      },
-      {
-        path: "/cultures",
-        element: <Cultures />,
-      },
-      {
-        path: "/addCultures",
-        element: <AddCultures />,
-      },
-      {
-        path: "/culturesOption",
-        element: <CulturesOption />,
-      },
-      {
-        path: "/createCulturesOption",
-        element: <CreateCulturesOption />,
-      },
-      {
-        path: "/invoice",
-        element: <Invoice />,
-      },
-      {
-        path: "/report",
-        element: <Invoice />,
-      },
-      {
-        path: "/branches",
-        element: <Branches />,
-      },
-    ],
+    element: <Navigate to={"/login"}></Navigate>,
   },
   {
     path: "/login",
@@ -76,6 +30,56 @@ const Router = createBrowserRouter([
   {
     path: "/lock",
     element: <Lock />,
+  },
+  {
+    path: "/dashboard",
+    element: <Root />,
+    children: [
+      {
+        path: "/dashboard",
+        element: <Dashboard />,
+      },
+      {
+        path: "/dashboard/profile",
+        element: <Profile />,
+      },
+      {
+        path: "/dashboard/test",
+        element: <Test />,
+      },
+      {
+        path: "/dashboard/createTest",
+        element: <CreateTest />,
+      },
+      {
+        path: "/dashboard/cultures",
+        element: <Cultures />,
+      },
+      {
+        path: "/dashboard/addCultures",
+        element: <AddCultures />,
+      },
+      {
+        path: "/dashboard/culturesOption",
+        element: <CulturesOption />,
+      },
+      {
+        path: "/dashboard/createCulturesOption",
+        element: <CreateCulturesOption />,
+      },
+      {
+        path: "/dashboard/invoice",
+        element: <Invoice />,
+      },
+      {
+        path: "/dashboard/report",
+        element: <Invoice />,
+      },
+      {
+        path: "/dashboard/branches",
+        element: <Branches />,
+      },
+    ],
   },
 ]);
 
