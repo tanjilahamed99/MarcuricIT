@@ -73,10 +73,13 @@ const Test = () => {
             </Link>
           </div>
 
-          <div>
+          <div className="mt-5 md:mt-0">
             <div className="flex items-center gap-3">
               <h2>Search : </h2>
-              <input className="border-2 p-1 px-3" placeholder="20 words" />
+              <input
+                className="border-2 p-1 px-3 w-2/3"
+                placeholder="20 words"
+              />
             </div>
           </div>
 
@@ -114,11 +117,11 @@ const Test = () => {
             </div>
 
             {/* filter */}
-            <div className="mt-10 flex items-center justify-between">
+            <div className="mt-10 flex flex-row  items-center justify-between gap-5 md:gap-0">
               <select
                 name="size"
                 onChange={handleShowData}
-                className="select select-bordered w-full max-w-xs"
+                className="select select-bordered w-fit"
               >
                 <option>5</option>
                 <option>10</option>
@@ -127,11 +130,11 @@ const Test = () => {
               </select>
 
               {/* pagination */}
-              <div className="join flex justify-center mb-5 gap-5">
+              <div className="join flex justify-center  gap-2 md:gap-5">
                 {pageSee?.map((item) => (
                   <button
                     onClick={() => showData(item + 1)}
-                    className="btn btn-active hover:btn btn-outline"
+                    className="btn btn-active hover:btn btn-outline btn-sm"
                     key={item}
                   >
                     {item + 1}

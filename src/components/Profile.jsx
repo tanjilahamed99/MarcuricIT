@@ -22,10 +22,10 @@ const Profile = () => {
   return (
     <div className="">
       <Navbar />
-      <div className="bg-slate-200 p-5">
+      <div className="bg-slate-200 md:p-5 p-2">
         <div className="flex justify-between items-center mb-5">
           <h2 className="text-lg font-medium">Profile</h2>
-          <div className="flex gap-2 items-center">
+          <div className="flex gap-2 items-center text-sm md:text-base">
             <Link>LIMS Healthcare</Link>/<Link>user</Link>/
             <Link>Edit Profile</Link>
           </div>

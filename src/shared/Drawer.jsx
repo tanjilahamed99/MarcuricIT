@@ -1,13 +1,10 @@
-import { NavLink, Outlet } from "react-router-dom";
 import { AiOutlineDashboard } from "react-icons/ai";
 import { CgProfile } from "react-icons/cg";
+import { FaAlignJustify } from "react-icons/fa";
 import { GrTest } from "react-icons/gr";
-import { GoLink } from "react-icons/go";
-import { TbFileInvoice } from "react-icons/tb";
-import { TbMessageReport } from "react-icons/tb";
-import { RiGitBranchLine } from "react-icons/ri";
+import { NavLink } from "react-router-dom";
 
-const Root = () => {
+const Drawer = () => {
   const ulLInks = (
     <>
       <li>
@@ -17,7 +14,7 @@ const Root = () => {
             isPending ? "pending" : isActive ? "active font-bold" : ""
           }
         >
-          <p className="flex items-center text-lg gap-2">
+          <p className="flex items-center  gap-2">
             <AiOutlineDashboard />
             Dashboard
           </p>
@@ -30,7 +27,7 @@ const Root = () => {
             isPending ? "pending" : isActive ? "active font-bold" : ""
           }
         >
-          <p className="flex items-center text-lg gap-2">
+          <p className="flex items-center  gap-2">
             <CgProfile />
             Profile
           </p>
@@ -43,7 +40,7 @@ const Root = () => {
             isPending ? "pending" : isActive ? "active font-bold" : ""
           }
         >
-          <p className="flex items-center text-lg gap-2">
+          <p className="flex items-center  gap-2">
             <GrTest />
             Tests
           </p>
@@ -53,22 +50,27 @@ const Root = () => {
   );
 
   return (
-    <div className="">
-      <div className="flex flex-col md:flex-row gap-5">
-        <div className="bg-white md:p-5 md:w-[20%] md:h-[100vh]">
-          <h2 className="text-2xl font-bold  md:text-start hidden md:flex">
-            Dashboard
-          </h2>
-          <ul className="md:space-y-5 hidden md:flex flex-row md:flex-col items-center md:items-start gap-5 mt-6 md:gap-0  justify-center md:justify-start">
-            {ulLInks}
-          </ul>
-        </div>
-        <div className="md:w-[80%]">
-          <Outlet />
-        </div>
+    <div className="drawer">
+      <input id="my-drawer" type="checkbox" className="drawer-toggle" />
+      <div className="drawer-content">
+        {/* Page content here */}
+        <label htmlFor="my-drawer" className="btn  drawer-button">
+          <FaAlignJustify className="cursor-pointer" />
+        </label>
+      </div>
+      <div className="drawer-side z-50">
+        <label
+          htmlFor="my-drawer"
+          aria-label="close sidebar"
+          className="drawer-overlay"
+        ></label>
+        <ul className="menu p-4 w-52 min-h-full bg-base-200 text-base-content">
+          {/* Sidebar content here */}
+          {ulLInks}
+        </ul>
       </div>
     </div>
   );
 };
 
-export default Root;
+export default Drawer;

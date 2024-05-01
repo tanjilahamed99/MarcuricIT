@@ -6,17 +6,21 @@ import { IoMdArrowDropdown } from "react-icons/io";
 import { CgProfile } from "react-icons/cg";
 import { CiLock } from "react-icons/ci";
 import { IoIosLogOut } from "react-icons/io";
+import Drawer from "./Drawer";
 
 const Navbar = () => {
   return (
     <div className="navbar bg-white border-b-2">
       <div className="flex-1">
         <div>
-          <FaAlignJustify className="cursor-pointer" />
+          <FaAlignJustify className="cursor-pointer hidden md:flex" />
+          <div className="md:hidden">
+            <Drawer />
+          </div>
         </div>
       </div>
       <div className="flex gap-4">
-        <div className="relative">
+        <div className="relative hidden md:flex">
           <input
             type="text"
             placeholder="User profile ser...."
@@ -24,19 +28,19 @@ const Navbar = () => {
           />
           <CiSearch className="absolute text-2xl right-3 top-3" />
         </div>
-        <MdOutlineFullscreen className="text-4xl" />
+        <MdOutlineFullscreen className="text-4xl hidden md:flex" />
 
-        <div className="avatar indicator">
-          <span className="indicator-item badge badge-secondary right-1">
+        <div className="avatar indicator z-10">
+          <span className="indicator-item badge badge-secondary right-1 text-sm">
             6
           </span>
           <div className="">
-            <IoIosNotifications className="text-4xl cursor-pointer" />
+            <IoIosNotifications className=" text-2xl md:text-4xl cursor-pointer" />
           </div>
         </div>
 
         <div className="avatar rounded-full">
-          <div className="w-12">
+          <div className="md:w-12 w-7">
             <img
               className="rounded-full"
               src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg"
