@@ -1,0 +1,122 @@
+[
+  {
+    "id": 1,
+    "Name": "Gulshan Branch",
+    "Phone": "0123456789",
+    "Address": "House #1, Road #1, Gulshan, Dhaka"
+  },
+  {
+    "id": 2,
+    "Name": "Dhanmondi Branch",
+    "Phone": "0234567890",
+    "Address": "House #2, Road #2, Dhanmondi, Dhaka"
+  },
+  {
+    "id": 3,
+    "Name": "Banani Branch",
+    "Phone": "0345678901",
+    "Address": "House #3, Road #3, Banani, Dhaka"
+  },
+  {
+    "id": 4,
+    "Name": "Mirpur Branch",
+    "Phone": "0456789012",
+    "Address": "House #4, Road #4, Mirpur, Dhaka"
+  },
+  {
+    "id": 5,
+    "Name": "Uttara Branch",
+    "Phone": "0567890123",
+    "Address": "House #5, Road #5, Uttara, Dhaka"
+  },
+  {
+    "id": 6,
+    "Name": "Mohakhali Branch",
+    "Phone": "0678901234",
+    "Address": "House #6, Road #6, Mohakhali, Dhaka"
+  },
+  {
+    "id": 7,
+    "Name": "Shantinagar Branch",
+    "Phone": "0789012345",
+    "Address": "House #7, Road #7, Shantinagar, Dhaka"
+  },
+  {
+    "id": 8,
+    "Name": "Baridhara Branch",
+    "Phone": "0890123456",
+    "Address": "House #8, Road #8, Baridhara, Dhaka"
+  },
+  {
+    "id": 9,
+    "Name": "Gulistan Branch",
+    "Phone": "0901234567",
+    "Address": "House #9, Road #9, Gulistan, Dhaka"
+  },
+  {
+    "id": 10,
+    "Name": "Motijheel Branch",
+    "Phone": "9012345678",
+    "Address": "House #10, Road #10, Motijheel, Dhaka"
+  },
+  {
+    "id": 11,
+    "Name": "Farmgate Branch",
+    "Phone": "1123456789",
+    "Address": "House #11, Road #11, Farmgate, Dhaka"
+  },
+  {
+    "id": 12,
+    "Name": "Puran Dhaka Branch",
+    "Phone": "1234567890",
+    "Address": "House #12, Road #12, Puran Dhaka, Dhaka"
+  },
+  {
+    "id": 13,
+    "Name": "Badda Branch",
+    "Phone": "2345678901",
+    "Address": "House #13, Road #13, Badda, Dhaka"
+  },
+  {
+    "id": 14,
+    "Name": "Mirpur DOHS Branch",
+    "Phone": "3456789012",
+    "Address": "House #14, Road #14, Mirpur DOHS, Dhaka"
+  },
+  {
+    "id": 15,
+    "Name": "Rampura Branch",
+    "Phone": "4567890123",
+    "Address": "House #15, Road #15, Rampura, Dhaka"
+  },
+  {
+    "id": 16,
+    "Name": "Bashundhara Branch",
+    "Phone": "5678901234",
+    "Address": "House #16, Road #16, Bashundhara, Dhaka"
+  },
+  {
+    "id": 17,
+    "Name": "Niketon Branch",
+    "Phone": "6789012345",
+    "Address": "House #17, Road #17, Niketon, Dhaka"
+  },
+  {
+    "id": 18,
+    "Name": "Kakrail Branch",
+    "Phone": "7890123456",
+    "Address": "House #18, Road #18, Kakrail, Dhaka"
+  },
+  {
+    "id": 19,
+    "Name": "Pallabi Branch",
+    "Phone": "8901234567",
+    "Address": "House #19, Road #19, Pallabi, Dhaka"
+  },
+  {
+    "id": 20,
+    "Name": "Tejgaon Branch",
+    "Phone": "9012345678",
+    "Address": "House #20, Road #20, Tejgaon, Dhaka"
+  }
+]

@@ -12,6 +12,7 @@ import AddCultures from "../components/AddCultures";
 import CulturesOption from "../components/CulturesOption";
 import CreateCulturesOption from "../components/CreateCulturesOption";
 import Invoice from "../components/Invoice";
+import Branches from "../components/Branches";
 
 const Router = createBrowserRouter([
   {
@@ -53,6 +54,14 @@ const Router = createBrowserRouter([
       {
         path: "/invoice",
         element: <Invoice />,
+      },
+      {
+        path: "/report",
+        element: <Invoice />,
+      },
+      {
+        path: "/branches",
+        element: <Branches />,
       },
     ],
   },
