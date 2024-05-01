@@ -52,9 +52,9 @@ const CulturesOption = () => {
 
           <div className="p-5 bg-white">
             <div className="flex justify-between items-center">
-              <h2 className="mb-3 text-lg font-bold">Cultures</h2>
+              <h2 className=" text-lg font-bold">Cultures</h2>
               <Link to={"/createCulturesOption"}>
-                <button className="btn btn-primary rounded-none btn-sm">
+                <button className="btn btn-primary rounded-none btn-sm text-[10px] md:text-sm">
                   <FaPlus />
                   Create cultures Option
                 </button>

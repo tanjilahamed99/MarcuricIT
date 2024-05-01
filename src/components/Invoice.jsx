@@ -55,6 +55,31 @@ const Invoice = () => {
     setPaginationData([...pagination]);
   }, [pageNumber, size]);
 
+  // search process
+  const [search, setSearch] = useState("");
+  const handleSearch = (data) => {
+    setSearch(data.target.value);
+  };
+
+  useEffect(() => {
+    filterData();
+  }, [search, dummyData]);
+
+  const filterData = () => {
+    if (!search) {
+      setMainData([...dummyData]);
+    } else {
+      const filteredData = dummyData.filter((item) => {
+        return (
+          item.clientName.toLowerCase().includes(search.toLowerCase()) ||
+          item.reference.toLowerCase().includes(search.toLowerCase()) ||
+          item.doctorName.toLowerCase().includes(search.toLowerCase())
+        );
+      });
+      setMainData(filteredData);
+    }
+  };
+
   return (
     <div className="">
       <Navbar />
@@ -77,6 +102,7 @@ const Invoice = () => {
             <div className="flex items-center gap-3">
               <h2>Search : </h2>
               <input
+                onChange={handleSearch}
                 className="border-2 p-1 px-3 w-2/3"
                 placeholder="20 words"
               />
@@ -141,8 +167,8 @@ const Invoice = () => {
             </div>
 
             {/* filter */}
-            <div className="mt-10 flex flex-row  items-center justify-between gap-5 md:gap-0">
-              <div className="flex items-center gap-5">
+            <div className="mt-10 flex flex-col  md:flex-row  items-center justify-between gap-5 md:gap-0">
+              <div className="flex flex-col md:flex-row items-center gap-5">
                 <select
                   name="size"
                   onChange={handleShowData}

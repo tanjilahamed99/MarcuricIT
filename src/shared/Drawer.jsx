@@ -1,7 +1,9 @@
 import { AiOutlineDashboard } from "react-icons/ai";
 import { CgProfile } from "react-icons/cg";
 import { FaAlignJustify } from "react-icons/fa";
+import { GoLink } from "react-icons/go";
 import { GrTest } from "react-icons/gr";
+import { TbFileInvoice, TbMessageReport } from "react-icons/tb";
 import { NavLink } from "react-router-dom";
 
 const Drawer = () => {
@@ -14,7 +16,7 @@ const Drawer = () => {
             isPending ? "pending" : isActive ? "active font-bold" : ""
           }
         >
-          <p className="flex items-center  gap-2">
+          <p className="flex items-center gap-2">
             <AiOutlineDashboard />
             Dashboard
           </p>
@@ -27,7 +29,7 @@ const Drawer = () => {
             isPending ? "pending" : isActive ? "active font-bold" : ""
           }
         >
-          <p className="flex items-center  gap-2">
+          <p className="flex items-center gap-2">
             <CgProfile />
             Profile
           </p>
@@ -40,9 +42,74 @@ const Drawer = () => {
             isPending ? "pending" : isActive ? "active font-bold" : ""
           }
         >
-          <p className="flex items-center  gap-2">
+          <p className="flex items-center gap-2">
             <GrTest />
             Tests
+          </p>
+        </NavLink>
+      </li>
+      <li>
+        <NavLink
+          to="/cultures"
+          className={({ isActive, isPending }) =>
+            isPending ? "pending" : isActive ? "active font-bold" : ""
+          }
+        >
+          <p className="flex items-center gap-2">
+            <GoLink />
+            Cultures
+          </p>
+        </NavLink>
+      </li>
+      <li>
+        <NavLink
+          to="/culturesOption"
+          className={({ isActive, isPending }) =>
+            isPending ? "pending" : isActive ? "active font-bold" : ""
+          }
+        >
+          <p className="flex items-center gap-2">
+            <GoLink />
+            Cultures option
+          </p>
+        </NavLink>
+      </li>
+      <li>
+        <NavLink
+          to="/invoice"
+          className={({ isActive, isPending }) =>
+            isPending ? "pending" : isActive ? "active font-bold" : ""
+          }
+        >
+          <p className="flex items-center gap-2">
+            <TbFileInvoice />
+            Invoice
+          </p>
+        </NavLink>
+      </li>
+      <li>
+        <NavLink
+          to="/report"
+          className={({ isActive, isPending }) =>
+            isPending ? "pending" : isActive ? "active font-bold" : ""
+          }
+        >
+          <p className="flex items-center gap-2">
+            <TbMessageReport />
+            Report
+          </p>
+        </NavLink>
+      </li>
+      <li>
+        <NavLink
+          to="/branches"
+          className={({ isActive, isPending }) =>
+            isPending ? "pending" : isActive ? "active font-bold" : ""
+          }
+        >
+          <p className="flex items-center gap-2">
+            <TbMessageReport />
+            Branches
           </p>
         </NavLink>
       </li>

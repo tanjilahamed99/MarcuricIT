@@ -15,10 +15,10 @@ const Dashboard = () => {
       <Navbar />
 
       <div className="bg-slate-200 p-5 text-[]">
-        <div className="flex justify-between items-center">
+        <div className="flex flex-col md:flex-row justify-between md:items-center gap-2">
           <h2 className="text-lg font-medium">Dashboard</h2>
 
-          <div className="flex items-center gap-3 border-2">
+          <div className="flex flex-col md:flex-row md:items-center gap-3 border-2">
             <DatePicker
               className="h-12 pl-4"
               selected={startDate}
@@ -52,7 +52,6 @@ const Dashboard = () => {
             </details>
           </div>
         </div>
-
         <div>
         </div>
       </div>
